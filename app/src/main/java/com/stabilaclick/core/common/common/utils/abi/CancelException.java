@@ -1,6 +1,6 @@
 package com.stabilaclick.core.common.common.utils.abi;
 
-public class CancelException extends TronException {
+public class CancelException extends StabilaException {
 
   public CancelException() {
     super();

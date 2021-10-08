@@ -19,7 +19,7 @@
 package com.stabilaclick.core.common.common.crypto;
 
 import com.stabilaclick.core.common.common.bip32.Numeric;
-import com.stabilaclick.core.common.common.crypto.jce.TronCastleProvider;
+import com.stabilaclick.core.common.common.crypto.jce.StabilaCastleProvider;
 import com.stabilaclick.core.common.config.Parameter;
 
 import org.bouncycastle.crypto.digests.RIPEMD160Digest;
@@ -45,7 +45,7 @@ public class Hash {
     private static final MessageDigest sha256digest;
 
     static {
-        Security.addProvider(TronCastleProvider.getInstance());
+        Security.addProvider(StabilaCastleProvider.getInstance());
         CRYPTO_PROVIDER = Security.getProvider("SC");
         HASH_256_ALGORITHM_NAME = "TRON-KECCAK-256";
         HASH_512_ALGORITHM_NAME = "TRON-KECCAK-512";

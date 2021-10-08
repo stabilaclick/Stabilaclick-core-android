@@ -1,6 +1,6 @@
 package com.stabilaclick.core.common.common.bip32;
 
-import com.stabilaclick.core.common.StringTronUtil;
+import com.stabilaclick.core.common.StringStabilaUtil;
 import com.stabilaclick.core.common.common.crypto.Hash;
 import com.stabilaclick.core.common.common.utils.Utils;
 
@@ -74,7 +74,7 @@ public class Keys {
         String publicKeyNoPrefix = Numeric.cleanHexPrefix(publicKey);
 
         if (publicKeyNoPrefix.length() < PUBLIC_KEY_LENGTH_IN_HEX) {
-            publicKeyNoPrefix = StringTronUtil.zeros(
+            publicKeyNoPrefix = StringStabilaUtil.zeros(
                     PUBLIC_KEY_LENGTH_IN_HEX - publicKeyNoPrefix.length())
                     + publicKeyNoPrefix;
         }

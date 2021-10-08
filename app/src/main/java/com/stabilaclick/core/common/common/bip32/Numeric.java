@@ -1,7 +1,7 @@
 package com.stabilaclick.core.common.common.bip32;
 
 
-import com.stabilaclick.core.common.StringTronUtil;
+import com.stabilaclick.core.common.StringStabilaUtil;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -77,7 +77,7 @@ public final class Numeric {
     }
 
     public static boolean containsHexPrefix(String input) {
-        return !StringTronUtil.isEmpty(input) && input.length() > 1
+        return !StringStabilaUtil.isEmpty(input) && input.length() > 1
                 && input.charAt(0) == '0' && input.charAt(1) == 'x';
     }
 
@@ -117,7 +117,7 @@ public final class Numeric {
     public static String toHexStringWithPrefixSafe(BigInteger value) {
         String result = toHexStringNoPrefix(value);
         if (result.length() < 2) {
-            result = StringTronUtil.zeros(1) + result;
+            result = StringStabilaUtil.zeros(1) + result;
         }
         return HEX_PREFIX + result;
     }
@@ -138,7 +138,7 @@ public final class Numeric {
         }
 
         if (length < size) {
-            result = StringTronUtil.zeros(size - length) + result;
+            result = StringStabilaUtil.zeros(size - length) + result;
         }
 
         if (withPrefix) {

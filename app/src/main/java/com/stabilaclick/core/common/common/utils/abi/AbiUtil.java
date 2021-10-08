@@ -1,7 +1,7 @@
 package com.stabilaclick.core.common.common.utils.abi;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.stabilaclick.core.common.StringTronUtil;
+import com.stabilaclick.core.common.StringStabilaUtil;
 import com.stabilaclick.core.common.common.crypto.Hash;
 import com.stabilaclick.core.common.common.utils.ByteUtil;
 
@@ -210,7 +210,7 @@ public class AbiUtil {
 
         @Override
         byte[] encode(String value) throws EncodingException {
-            byte[] address = StringTronUtil.decodeFromBase58Check(value);
+            byte[] address = StringStabilaUtil.decodeFromBase58Check(value);
             if (address == null) {
                 throw new EncodingException("invalid address input");
             }

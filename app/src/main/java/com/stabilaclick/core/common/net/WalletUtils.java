@@ -1,13 +1,13 @@
 package com.stabilaclick.core.common.net;
 
-import com.stabilaclick.core.common.StringTronUtil;
+import com.stabilaclick.core.common.StringStabilaUtil;
 import com.stabilaclick.core.common.common.crypto.Hash;
 import com.stabilaclick.core.common.common.crypto.SymmEncoder;
 import com.stabilaclick.core.common.common.utils.ByteArray;
 import com.stabilaclick.core.common.common.utils.Sha256Hash;
 import com.stabilaclick.core.wallet.Wallet;
 
-import org.tron.protos.Protocol;
+import org.stabila.protos.Protocol;
 
 
 public class WalletUtils {
@@ -16,17 +16,17 @@ public class WalletUtils {
 
         if (!wallet.isWatchOnly()) {
 
-            byte[] pwd = StringTronUtil.getPasswordHash(password);
+            byte[] pwd = StringStabilaUtil.getPasswordHash(password);
             String pwdAsc = ByteArray.toHexString(pwd);
 
             //encrypted by password
-            byte[] aseKey = StringTronUtil.getEncKey(password);
+            byte[] aseKey = StringStabilaUtil.getEncKey(password);
 
             byte[] privKeyPlain = wallet.getECKey().getPrivKeyBytes();
             byte[] privKeyEnced = SymmEncoder.AES128EcbEnc(privKeyPlain, aseKey);
             String privKeyStr = ByteArray.toHexString(privKeyEnced);
             String mnemonicStr = null;
-            if (!StringTronUtil.isEmpty(wallet.getMnemonic())) {
+            if (!StringStabilaUtil.isEmpty(wallet.getMnemonic())) {
                 byte[] mnemonicPlain = wallet.getMnemonic().getBytes();
                 byte[] mnemonicEnced = SymmEncoder.AESEcbEnc(mnemonicPlain, aseKey);
                 mnemonicStr = ByteArray.toHexString(mnemonicEnced);

@@ -22,7 +22,7 @@ import com.stabilaclick.core.common.common.crypto.jce.ECKeyAgreement;
 import com.stabilaclick.core.common.common.crypto.jce.ECKeyFactory;
 import com.stabilaclick.core.common.common.crypto.jce.ECKeyPairGenerator;
 import com.stabilaclick.core.common.common.crypto.jce.ECSignatureFactory;
-import com.stabilaclick.core.common.common.crypto.jce.TronCastleProvider;
+import com.stabilaclick.core.common.common.crypto.jce.StabilaCastleProvider;
 import com.stabilaclick.core.common.common.utils.ByteUtil;
 
 import org.spongycastle.asn1.ASN1InputStream;
@@ -166,7 +166,7 @@ public class ECKey implements Serializable {
    * @param secureRandom -
    */
   public ECKey(SecureRandom secureRandom) {
-    this(TronCastleProvider.getInstance(), secureRandom);
+    this(StabilaCastleProvider.getInstance(), secureRandom);
   }
 
 
@@ -202,7 +202,7 @@ public class ECKey implements Serializable {
    */
   public ECKey(@Nullable BigInteger priv, ECPoint pub) {
     this(
-        TronCastleProvider.getInstance(),
+        StabilaCastleProvider.getInstance(),
         privateKeyFromBigInteger(priv),
         pub
     );
@@ -237,7 +237,7 @@ public class ECKey implements Serializable {
     } else {
       try {
         return ECKeyFactory
-            .getInstance(TronCastleProvider.getInstance())
+            .getInstance(StabilaCastleProvider.getInstance())
             .generatePrivate(new ECPrivateKeySpec(priv,
                 CURVE_SPEC));
       } catch (InvalidKeySpecException ex) {

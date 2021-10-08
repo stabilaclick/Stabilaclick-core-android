@@ -2,7 +2,7 @@ package com.stabilaclick.core.common.net;
 
 
 import com.google.protobuf.ByteString;
-import com.stabilaclick.core.common.StringTronUtil;
+import com.stabilaclick.core.common.StringStabilaUtil;
 import com.stabilaclick.core.common.common.crypto.Hash;
 import com.stabilaclick.core.common.common.utils.ByteArray;
 import com.stabilaclick.core.common.common.utils.TransactionUtils;
@@ -11,16 +11,17 @@ import com.stabilaclick.core.common.common.utils.abi.CancelException;
 import com.stabilaclick.core.common.common.utils.abi.EncodingException;
 
 import org.spongycastle.util.encoders.Hex;
-import org.tron.api.GrpcAPI;
-import org.tron.protos.Contract;
-import org.tron.protos.Protocol;
+import org.stabila.api.GrpcAPI;
+import org.stabila.protos.Contract;
+import org.stabila.protos.Protocol;
+import org.stabila.api.GrpcAPI;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class TronAPI {
+public class StabilaAPI {
 
 
     public static Protocol.Account queryAccount(byte[] address, boolean useSolidity) throws ConnectErrorException {
@@ -86,7 +87,7 @@ public class TronAPI {
     }
 
 
-    public static org.tron.api.GrpcAPI.DelegatedResourceList delegatedResourceList(String fromAddress, String toAddress) throws ConnectErrorException {
+    public static org.stabila.api.GrpcAPI.DelegatedResourceList delegatedResourceList(String fromAddress, String toAddress) throws ConnectErrorException {
         return IGrpcClient.THIS.getCli().queryDgList(fromAddress, toAddress);
     }
 
@@ -106,11 +107,11 @@ public class TronAPI {
         return IGrpcClient.THIS.getCli().getAssetIssueByName(assetName);
     }
 
-    public static org.tron.api.GrpcAPI.NumberMessage getTotalTransaction() {
+    public static org.stabila.api.GrpcAPI.NumberMessage getTotalTransaction() {
         return IGrpcClient.THIS.getCli().getTotalTransaction();
     }
 
-    public static org.tron.api.GrpcAPI.NumberMessage getNextMaintenanceTime() {
+    public static org.stabila.api.GrpcAPI.NumberMessage getNextMaintenanceTime() {
         return IGrpcClient.THIS.getCli().getNextMaintenanceTime();
     }
 
@@ -232,7 +233,7 @@ public class TronAPI {
             argsStr = "";
         }
         byte[] input = Hex.decode(AbiUtil.parseMethod(methodStr, argsStr, isHex));
-        byte[] contractAddress = StringTronUtil.decodeFromBase58Check(contractAddrStr);
+        byte[] contractAddress = StringStabilaUtil.decodeFromBase58Check(contractAddrStr);
 
         return triggerContract(ower, contractAddress, callValue, input, feeLimit);
     }
@@ -386,7 +387,7 @@ public class TronAPI {
             long count = Long.parseLong(value);
             Contract.VoteWitnessContract.Vote.Builder voteBuilder = Contract.VoteWitnessContract.Vote
                     .newBuilder();
-            byte[] address = StringTronUtil.decodeFromBase58Check(addressBase58);
+            byte[] address = StringStabilaUtil.decodeFromBase58Check(addressBase58);
             if (address == null) {
                 continue;
             }

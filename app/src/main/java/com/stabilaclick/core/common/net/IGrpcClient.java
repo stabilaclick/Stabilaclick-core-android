@@ -1,7 +1,7 @@
 package com.stabilaclick.core.common.net;
 
 
-import com.stabilaclick.core.common.StringTronUtil;
+import com.stabilaclick.core.common.StringStabilaUtil;
 
 public enum IGrpcClient {
     THIS;
@@ -42,12 +42,12 @@ public enum IGrpcClient {
 //        }
 
         rpcCli = new GrpcClient();
-        if (StringTronUtil.isEmpty(ip_sol)) {
+        if (StringStabilaUtil.isEmpty(ip_sol)) {
             rpcCli.connetSolidityNode();
         } else {
             rpcCli.connetSolidityNode(ip_sol);
         }
-        if (StringTronUtil.isEmpty(ip)) {
+        if (StringStabilaUtil.isEmpty(ip)) {
             rpcCli.connetFullNode();
         } else {
             rpcCli.connetFullNode(ip);

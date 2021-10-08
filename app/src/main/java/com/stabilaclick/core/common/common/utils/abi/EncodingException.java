@@ -1,6 +1,6 @@
 package com.stabilaclick.core.common.common.utils.abi;
 
-public class EncodingException extends TronException {
+public class EncodingException extends StabilaException {
   public EncodingException() {
     super();
   }

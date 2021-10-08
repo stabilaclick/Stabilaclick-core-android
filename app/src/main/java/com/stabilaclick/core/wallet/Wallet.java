@@ -1,6 +1,6 @@
 package com.stabilaclick.core.wallet;
 
-import com.stabilaclick.core.common.StringTronUtil;
+import com.stabilaclick.core.common.StringStabilaUtil;
 import com.stabilaclick.core.common.common.bip32.Bip32ECKeyPair;
 import com.stabilaclick.core.common.common.crypto.ECKey;
 import com.stabilaclick.core.common.common.crypto.MnemonicUtils;
@@ -155,9 +155,9 @@ public class Wallet {
 
     public String getAddress() {
         if (mECKey != null) {
-            return StringTronUtil.encode58Check(mECKey.getAddress());
+            return StringStabilaUtil.encode58Check(mECKey.getAddress());
         } else if (publicKey != null) {
-            return StringTronUtil.encode58Check(ECKey.fromPublicOnly(publicKey).getAddress());
+            return StringStabilaUtil.encode58Check(ECKey.fromPublicOnly(publicKey).getAddress());
         } else {
             return address;
         }

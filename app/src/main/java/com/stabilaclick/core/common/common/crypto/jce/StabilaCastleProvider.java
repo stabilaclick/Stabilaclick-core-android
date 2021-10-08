@@ -23,7 +23,7 @@ import org.spongycastle.jce.provider.BouncyCastleProvider;
 import java.security.Provider;
 import java.security.Security;
 
-public final class TronCastleProvider {
+public final class StabilaCastleProvider {
 
     public static Provider getInstance() {
         return Holder.INSTANCE;
@@ -37,9 +37,9 @@ public final class TronCastleProvider {
 
             INSTANCE = (p != null) ? p : new BouncyCastleProvider();
 
-            INSTANCE.put("MessageDigest.TRON-KECCAK-256", "org.tron.common.crypto" +
+            INSTANCE.put("MessageDigest.TRON-KECCAK-256", "org.stabila.common.crypto" +
                     ".cryptohash.Keccak256");
-            INSTANCE.put("MessageDigest.TRON-KECCAK-512", "org.tron.common.crypto" +
+            INSTANCE.put("MessageDigest.TRON-KECCAK-512", "org.stabila.common.crypto" +
                     ".cryptohash.Keccak512");
         }
     }

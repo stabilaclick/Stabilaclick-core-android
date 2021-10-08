@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 /**
  * 处理字符串工具类
  */
-public class StringTronUtil {
+public class StringStabilaUtil {
     /**
      * 判断是否为空
      *
@@ -59,7 +59,7 @@ public class StringTronUtil {
      * @return 是否合法
      */
     public static boolean isOkPassword(String password) {
-        if (StringTronUtil.isNullOrEmpty(password)) {
+        if (StringStabilaUtil.isNullOrEmpty(password)) {
             return false;
         }
 //        Pattern pattern = Pattern
