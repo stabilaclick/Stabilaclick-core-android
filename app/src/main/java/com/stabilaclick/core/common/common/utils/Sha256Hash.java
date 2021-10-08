@@ -1,4 +1,4 @@
-package com.tronlink.core.common.common.utils;
+package com.stabilaclick.core.common.common.utils;
 
 /*
  * Copyright 2011 Google Inc.

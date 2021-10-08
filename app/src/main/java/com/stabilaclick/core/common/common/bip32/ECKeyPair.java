@@ -1,7 +1,7 @@
-package com.tronlink.core.common.common.bip32;
+package com.stabilaclick.core.common.common.bip32;
 
 
-import com.tronlink.core.common.common.crypto.ECKey;
+import com.stabilaclick.core.common.common.crypto.ECKey;
 
 import org.bouncycastle.crypto.digests.SHA256Digest;
 import org.bouncycastle.crypto.params.ECPrivateKeyParameters;

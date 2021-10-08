@@ -1,4 +1,4 @@
-package com.tronlink.core;
+package com.stabilaclick.core;
 
 import android.content.Context;
 

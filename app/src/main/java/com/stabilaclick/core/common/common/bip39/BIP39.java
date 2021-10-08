@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.tronlink.core.common.common.bip39;
+package com.stabilaclick.core.common.common.bip39;
 
-import org.tron.common.crypto.Hash;
+import com.stabilaclick.core.common.common.crypto.Hash;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;

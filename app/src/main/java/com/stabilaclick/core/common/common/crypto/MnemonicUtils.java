@@ -1,6 +1,6 @@
-package com.tronlink.core.common.common.crypto;
+package com.stabilaclick.core.common.common.crypto;
 
-import com.tronlink.core.common.common.bip39.BIP39;
+import com.stabilaclick.core.common.common.bip39.BIP39;
 
 import org.bouncycastle.crypto.digests.SHA512Digest;
 import org.bouncycastle.crypto.generators.PKCS5S2ParametersGenerator;

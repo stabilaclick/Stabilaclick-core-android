@@ -1,14 +1,14 @@
-package com.tronlink.core.wallet;
+package com.stabilaclick.core.wallet;
 
-import com.tronlink.core.common.StringTronUtil;
-import com.tronlink.core.common.common.bip32.Bip32ECKeyPair;
-import com.tronlink.core.common.common.crypto.ECKey;
-import com.tronlink.core.common.common.crypto.MnemonicUtils;
-import com.tronlink.core.common.common.utils.Utils;
+import com.stabilaclick.core.common.StringTronUtil;
+import com.stabilaclick.core.common.common.bip32.Bip32ECKeyPair;
+import com.stabilaclick.core.common.common.crypto.ECKey;
+import com.stabilaclick.core.common.common.crypto.MnemonicUtils;
+import com.stabilaclick.core.common.common.utils.Utils;
 
 import java.math.BigInteger;
 
-import static com.tronlink.core.common.common.bip32.Bip32ECKeyPair.HARDENED_BIT;
+import static com.stabilaclick.core.common.common.bip32.Bip32ECKeyPair.HARDENED_BIT;
 
 
 public class Wallet {

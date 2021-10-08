@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tronlink.core.common.common.crypto;
+package com.stabilaclick.core.common.common.crypto;
 
 import java.io.DataInputStream;
 import java.io.File;

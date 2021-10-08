@@ -1,4 +1,4 @@
-package com.tronlink.core.tronlink_core_android;
+package com.stabilaclick.core.stabilaclick_core_android;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.tronlink.core.tronlink_core_android", appContext.getPackageName());
+        assertEquals("com.stabilaclick.core.stabilaclick_core_android", appContext.getPackageName());
     }
 }

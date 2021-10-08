@@ -1,4 +1,4 @@
-package com.tronlink.core.tronlink_core_android;
+package com.stabilaclick.core.stabilaclick_core_android;
 
 import org.junit.Test;
 

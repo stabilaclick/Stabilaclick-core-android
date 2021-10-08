@@ -1,4 +1,4 @@
-package com.tronlink.core.common.common.utils.abi;
+package com.stabilaclick.core.common.common.utils.abi;
 
 public class TronException extends Exception {
 

@@ -1,6 +1,6 @@
-package com.tronlink.core.wallet;
+package com.stabilaclick.core.wallet;
 
-import com.tronlink.core.common.net.WalletUtils;
+import com.stabilaclick.core.common.net.WalletUtils;
 
 public class CreatWalletDemo {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tronlink.core.common.common.bip39;
+package com.stabilaclick.core.common.common.bip39;
 
 public class ValidationException extends Exception
 {

@@ -16,7 +16,7 @@
  * along with the ethereumJ library. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.tronlink.core.common.common.crypto.jce;
+package com.stabilaclick.core.common.common.crypto.jce;
 
 import org.spongycastle.jce.provider.BouncyCastleProvider;
 

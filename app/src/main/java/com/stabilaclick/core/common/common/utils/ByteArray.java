@@ -16,7 +16,7 @@
  * along with the ethereumJ library. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.tronlink.core.common.common.utils;
+package com.stabilaclick.core.common.common.utils;
 
 
 import org.spongycastle.util.encoders.Hex;

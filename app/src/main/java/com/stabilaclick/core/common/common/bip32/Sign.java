@@ -1,7 +1,7 @@
-package com.tronlink.core.common.common.bip32;
+package com.stabilaclick.core.common.common.bip32;
 
-import com.tronlink.core.common.common.crypto.ECKey;
-import com.tronlink.core.common.common.crypto.Hash;
+import com.stabilaclick.core.common.common.crypto.ECKey;
+import com.stabilaclick.core.common.common.crypto.Hash;
 
 import org.bouncycastle.asn1.x9.X9ECParameters;
 import org.bouncycastle.asn1.x9.X9IntegerConverter;
@@ -16,7 +16,7 @@ import java.math.BigInteger;
 import java.security.SignatureException;
 import java.util.Arrays;
 
-import static com.tronlink.core.common.common.bip32.Assertions.verifyPrecondition;
+import static com.stabilaclick.core.common.common.bip32.Assertions.verifyPrecondition;
 
 
 /**

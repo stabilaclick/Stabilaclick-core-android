@@ -1,4 +1,4 @@
-package com.tronlink.core.common.config;
+package com.stabilaclick.core.common.config;
 
 public interface Parameter {
 

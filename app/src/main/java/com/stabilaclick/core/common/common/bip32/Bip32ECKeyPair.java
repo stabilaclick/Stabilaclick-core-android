@@ -1,6 +1,6 @@
-package com.tronlink.core.common.common.bip32;
+package com.stabilaclick.core.common.common.bip32;
 
-import com.tronlink.core.common.common.crypto.Hash;
+import com.stabilaclick.core.common.common.crypto.Hash;
 
 import org.bouncycastle.math.ec.ECPoint;
 
