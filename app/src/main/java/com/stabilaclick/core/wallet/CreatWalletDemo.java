@@ -5,7 +5,7 @@ import com.stabilaclick.core.common.net.WalletUtils;
 public class CreatWalletDemo {
 
     public void creat() {
-        String name = "TronLink";
+        String name = "StabilaLink";
         String password = "12345678";
         try {
             Wallet wallet = new Wallet(true);

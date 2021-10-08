@@ -21,7 +21,7 @@ public class Wallet {
     private byte[] encPrivateKey;
     private byte[] publicKey;
     private String mnemonic;
-    private int createType = -1;// tronconfig type
+    private int createType = -1;// stabilaconfig type
     private long createTime;
 
 
